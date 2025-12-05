@@ -8,25 +8,25 @@ Hello World!
   <ul id="repo-list"></ul>
 
   <script>
-    const username = "aurob";
-    const list = document.getElementById("repo-list");
+  //   const username = "aurob";
+  //   const list = document.getElementById("repo-list");
 
-    fetch(`https://api.github.com/users/${username}/repos`)
-      .then(res => res.json())
-      .then(data => {
-        data.forEach(repo => {
-          const li = document.createElement("li");
-          li.innerHTML = `
-            <a href="${repo.html_url}" target="_blank">${repo.name}</a> 
-            (⭐ ${repo.stargazers_count}, 🍴 ${repo.forks_count})
-            <br>
-            ${repo.description || "No description"}
-          `;
-          list.appendChild(li);
-        });
-      })
-      .catch(err => console.error(err));
-  </script>
+  // //   fetch(`https://api.github.com/users/${username}/repos`)
+  // //     .then(res => res.json())
+  // //     .then(data => {
+  // //       data.forEach(repo => {
+  // //         const li = document.createElement("li");
+  // //         li.innerHTML = `
+  // //           <a href="${repo.html_url}" target="_blank">${repo.name}</a> 
+  // //           (⭐ ${repo.stargazers_count}, 🍴 ${repo.forks_count})
+  // //           <br>
+  // //           ${repo.description || "No description"}
+  // //         `;
+  // //         list.appendChild(li);
+  // //       });
+  // //     })
+  // //     .catch(err => console.error(err));
+  // // </script>
   <script src="https://cdn.dump.garden/wr/wr.js"></script>
 </body>
 </html>
